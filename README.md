@@ -11,7 +11,7 @@ This Discord bot is designed to streamline the gaming experience for users on Di
 
 The bot's functionality revolves around two simple commands:
 
-1. **Registration with SteamID**: Users start by registering their SteamID on the Discord server. This is done using the `!1bv <SteamID>` command. For example: `!1bv 76561198036685843` (replace this with your own SteamID). This process links the user's Steam account to their Discord account and stores it in our database. Registration is a one-time process.
+1. **Registration with SteamID**: Users start by registering their SteamID on the Discord server. This is done using the `!regiser <SteamID>` command. For example: `!register 76561198036680000` (replace this with your own SteamID). This process links the user's Steam account to their Discord account and stores it in our database. Registration is a one-time process.
 
 2. **Team Switching in Game**: Once registered, players who wish to switch teams in-game can simply type the `!switch` command in the designated Discord channel. This triggers the bot to switch the player to the opposite team in the game server.
 
