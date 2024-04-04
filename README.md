@@ -21,6 +21,7 @@ The bot's functionality revolves around two simple commands:
 - **Persistent Linking of Accounts**: Registering the SteamID with the bot links the Discord and Steam accounts, making future switches seamless.
 - **Dedicated Commands**: `!register` for registration and `!switch` for team switching, ensuring simple and intuitive usage.
 - **Exclusive Channel Operation**: The bot's commands are restricted to a specific channel for organized and efficient operation.
+- **Multilingual Support**: Offers translations for messages in multiple languages.
 
 ## Additional Notes
 
@@ -29,14 +30,6 @@ The bot's functionality revolves around two simple commands:
 - This bot enhances the gaming experience by offering a quick and easy solution to a common gaming challenge.
 
 ---
-
-## Key Features
-
-- **Discord Bot Integration**: Interacts with users on a specified Discord channel.
-- **External API Integration**: Connects to the CRCON API to switch players who have previously registered in the respective channel.
-- **Database Support**: Uses SQLite for storing and managing user data.
-- **Multilingual Support**: Offers translations for messages in multiple languages.
-- **User and Gaming Management**: Associates Discord users with gaming identities (e.g., Steam IDs).
 
 ## Configuration
 
