@@ -44,10 +44,10 @@ Set up the application by renaming the `default.env` file to `.env` and configur
 
 - `DISCORD_BOT_TOKEN`: Your Discord bot token.
 - `API_BASE_URL`: Base URL of the external API.
-- `USERNAME` & `PASSWORD`: Credentials for the API.
-- `API_TOKEN`: Additional API token.
+- `USERNAME` & `PASSWORD`: Credentials for the CRCON API.
+- `API_TOKEN`: CRCON API token.
 - `ALLOWED_CHANNEL_ID`: Discord channel ID where the bot operates.
-- `DB_FILE`: Path to your SQLite database file.
+- `DB_FILE`: Path to your SQLite database file. Do not rename this file!
 - `COMMAND_SWITCH` & `COMMAND_REG`: Command keywords for bot operations.
 - `LANGUAGE`: Preferred language (default is English).
 
