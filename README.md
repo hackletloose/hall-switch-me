@@ -36,7 +36,7 @@ The bot's functionality revolves around two simple commands:
 Set up the application by renaming the `default.env` file to `.env` and configuring it. The key environment variables include:
 
 - `DISCORD_BOT_TOKEN`: Your Discord bot token.
-- `API_BASE_URL`: Base URL of the external API.
+- `API_BASE_URL`: Base URL of the CRCON API.
 - `USERNAME` & `PASSWORD`: Credentials for the CRCON API.
 - `API_TOKEN`: CRCON API token.
 - `ALLOWED_CHANNEL_ID`: Discord channel ID where the bot operates.
