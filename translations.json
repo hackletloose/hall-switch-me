@@ -1,0 +1,28 @@
+{
+    "en": {
+        "logged_in": "{bot_name} has logged in.",
+        "api_login_success": "API login successful!",
+        "api_login_failure": "API login failed.",
+        "register_success": "Player {player_name} with SteamID {steam_id} successfully registered for {user_mention}.",
+        "register_failure": "SteamID {steam_id} is already registered.",
+        "fetch_failure": "Could not retrieve player information for SteamID {steam_id}.",
+        "invalid_steam_id": "Please provide a valid SteamID.",
+        "not_registered": "Your SteamID or player name is not registered. Please register first with !steamregister.",
+        "switch_request_success": "Switch request for {player_name} successfully sent.",
+        "switch_request_failure": "Error sending the switch request for {player_name}.",
+        "other_message": "This is an example of another message."
+    },
+    "de": {
+        "logged_in": "{bot_name} hat sich eingeloggt.",
+        "api_login_success": "API Login erfolgreich!",
+        "api_login_failure": "API Login fehlgeschlagen.",
+        "register_success": "Spieler {player_name} mit SteamID {steam_id} erfolgreich für {user_mention} registriert.",
+        "register_failure": "SteamID {steam_id} ist bereits registriert.",
+        "fetch_failure": "Konnte Spielerinformationen für SteamID {steam_id} nicht abrufen.",
+        "invalid_steam_id": "Bitte geben Sie eine gültige SteamID an.",
+        "not_registered": "Deine SteamID oder Spielername ist nicht registriert. Bitte registriere dich zuerst mit !steamregister.",
+        "switch_request_success": "Switch-Anfrage für {player_name} erfolgreich gesendet.",
+        "switch_request_failure": "Fehler beim Senden der Switch-Anfrage für {player_name}.",
+        "other_message": "Dies ist ein Beispiel für eine weitere Nachricht."
+    }
+}
