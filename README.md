@@ -54,7 +54,7 @@ Set up the application by renaming the `default.env` file to `.env` and configur
 
 ## Usage
 
-Run `bot.py` to start the Discord bot. Ensure that all configuration settings in `default.env` are correctly set. The bot will listen for commands on the specified Discord channel and interact with users according to the implemented functionalities.
+Run `bot.py` to start the Discord bot. Ensure that all configuration settings in `.env` are correctly set. The bot will listen for commands on the specified Discord channel and interact with users according to the implemented functionalities.
 
 ## Dependencies
 
