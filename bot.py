@@ -18,6 +18,8 @@ API_TOKEN = os.getenv('API_TOKEN')
 ALLOWED_CHANNEL_ID = os.getenv('ALLOWED_CHANNEL_ID')
 DB_FILE = os.getenv('DB_FILE')
 LANGUAGE = os.getenv('LANGUAGE', 'en')
+COMMAND_SWITCH = os.getenv('COMMAND_SWITCH')
+COMMAND_1BV = os.getenv('COMMAND_1BV')
 
 # Lade die Sprachdatei
 with open('translations.json', 'r') as file:
@@ -51,7 +53,7 @@ class MyBot(discord.Client):
         await handle_command(self, message)
 
 async def handle_command(client, message):
-    if message.content.startswith('!1bv'):
+    if message.content.startswith(f'!{COMMAND_SWITCH}'):
         parts = message.content.split()
         if len(parts) == 2 and is_valid_steam_id(parts[1]):
             steam_id = parts[1]
@@ -69,7 +71,7 @@ async def handle_command(client, message):
         else:
             await message.channel.send(lang['invalid_steam_id'])
 
-    elif message.content.startswith('!switch'):
+    elif message.content.startswith(f'!{COMMAND_SWITCH}'):
         discord_id = str(message.author.id)
         steam_id, player_name = client.db.get_steam_id_and_name(discord_id)
 
