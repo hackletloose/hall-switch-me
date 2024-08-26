@@ -19,16 +19,15 @@ class APIClient:
             return False
         return True
 
-
-    def do_switch_player_now(self, player, steam_id_64, message):
-        url = f'{self.base_url}/api/do_switch_player_now'
-        data = {"player": player}
+    def switch_player_now(self, player_name):
+        url = f'{self.base_url}/api/switch_player_now'
+        data = {"player_name": player_name}
         response = self.session.post(url, json=data)
         response.raise_for_status()
         return response.json()
 
-    def get_player_by_steam_id(self, steam_id_64):
-        url = f'{self.base_url}/api/player?steam_id_64={steam_id_64}'
+    def get_player_profile(self, steam_id_64):
+        url = f'{self.base_url}/api/get_player_profile?player_id={steam_id_64}'
         response = self.session.get(url)
         response.raise_for_status()
         return response.json()

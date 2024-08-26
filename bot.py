@@ -30,7 +30,6 @@ intents = discord.Intents.default()
 intents.messages = True
 intents.message_content = True
 
-
 class MyBot(discord.Client):
     def __init__(self, intents):
         super().__init__(command_prefix='!', intents=intents)
@@ -58,8 +57,8 @@ async def handle_command(client, message):
         if len(parts) == 2 and is_valid_steam_id(parts[1]):
             steam_id = parts[1]
 
-            # API-Anfrage, um den Spielername zu erhalten
-            player_info = client.api_client.get_player_by_steam_id(steam_id)
+            # API-Anfrage, um das Spielerprofil zu erhalten
+            player_info = client.api_client.get_player_profile(steam_id)
             if not player_info.get('failed') and 'result' in player_info and player_info['result']['names']:
                 player_name = player_info['result']['names'][0]['name']  # Erster Name in der Liste
                 if client.db.add_user_with_name(message.author.id, steam_id, player_name):
@@ -78,14 +77,11 @@ async def handle_command(client, message):
         if steam_id is None or player_name is None:
             await message.channel.send(lang['not_registered'])
         else:
-            response = client.api_client.do_switch_player_now(player_name, steam_id, 'Nachricht')
-            if response.get('result') == 'SUCCESS' and not response.get('failed'):
+            response = client.api_client.switch_player_now(player_name)
+            if response.get('result') == True and not response.get('failed'):
                 await message.channel.send(lang['switch_request_success'].format(player_name=player_name))
             else:
                 await message.channel.send(lang['switch_request_failure'].format(player_name=player_name))
-
-
-
 
 # Bot-Instanz erstellen und starten
 bot = MyBot(intents=intents)
