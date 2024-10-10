@@ -10,15 +10,6 @@ class APIClient:
             "Content-Type": "application/json"
         })
 
-    def login(self, username, password):
-        url = f'{self.base_url}/api/login'
-        data = {'username': username, 'password': password}
-        response = self.session.post(url, json=data)
-        if response.status_code != 200:
-            print(f"Fehler beim Login: {response.status_code}, Antwort: {response.text}")
-            return False
-        return True
-
     def switch_player_now(self, player_name):
         url = f'{self.base_url}/api/switch_player_now'
         data = {"player_name": player_name}
@@ -28,6 +19,18 @@ class APIClient:
 
     def get_player_profile(self, steam_id_64):
         url = f'{self.base_url}/api/get_player_profile?player_id={steam_id_64}'
+        response = self.session.get(url)
+        response.raise_for_status()
+        return response.json()
+
+    def get_gamestate(self):
+        url = f'{self.base_url}/api/get_gamestate'
+        response = self.session.get(url)
+        response.raise_for_status()
+        return response.json()
+
+    def get_detailed_players(self):
+        url = f'{self.base_url}/api/get_detailed_players'
         response = self.session.get(url)
         response.raise_for_status()
         return response.json()
