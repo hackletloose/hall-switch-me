@@ -1,0 +1,5 @@
+requests
+python-dotenv
+discord.py
+api-client
+utils
