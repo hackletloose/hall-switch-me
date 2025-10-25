@@ -152,6 +152,6 @@ continues to work; `steam_id` is used as `player_id`.
 ## Acknowledgements
 
 * CRCON community & maintainers.
-* Original README content updated for v2 and multi-instance support. 
+* Original README content updated for v3 and multi-instance support. 
 
 Happy switching! 🎮
