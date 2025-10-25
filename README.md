@@ -149,12 +149,6 @@ continues to work; `steam_id` is used as `player_id`.
 
 ---
 
-## License
-
-Choose a license that fits your project (e.g., MIT). Add a `LICENSE` file to the repository.
-
----
-
 ## Acknowledgements
 
 * CRCON community & maintainers.
